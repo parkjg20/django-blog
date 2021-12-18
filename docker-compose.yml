@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  python:
+    image: django-python
+    ports:
+      - "3000:3000"
+    build: .
+    volumes:
+      - ./src:/sources/
+# TODO: 네트워크 설정 진행중
+#    networks:
+#      dev_net:
+# networks:
+#   dev_net:
+#     driver: nat
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: '172.20.144.0/20'
+#           gateway: 172.20.144.1
